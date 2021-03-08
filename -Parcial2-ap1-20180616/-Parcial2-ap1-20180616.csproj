@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
+	  <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>_Parcial2_ap1_20180616</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
@@ -32,6 +33,12 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DATA\GestionProyectos.Db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
