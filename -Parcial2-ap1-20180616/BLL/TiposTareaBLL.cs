@@ -18,7 +18,7 @@ namespace _Parcial2_ap1_20180616.BLL
 
             try
             {
-                encontrado = contexto.Proyectos.Any(e => e.Descripcion.ToLower() == descripcion.ToLower());
+                encontrado = contexto.TiposTarea.Any(e => e.Descripcion.ToLower() == descripcion.ToLower());
             }
             catch (Exception)
             {
@@ -32,14 +32,14 @@ namespace _Parcial2_ap1_20180616.BLL
             return encontrado;
         }
         
-        private static bool Insertar(Proyectos proyectos)
+        private static bool Insertar(TiposTarea tiposTarea)
         {
             bool paso = false;
             var contexto = new Contexto();
 
             try
             {
-                contexto.Proyectos.Add(proyectos);
+                contexto.TiposTarea.Add(tiposTarea);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -54,14 +54,14 @@ namespace _Parcial2_ap1_20180616.BLL
             return paso;
         }
 
-        private static bool Modificar(Proyectos proyectos)
+        private static bool Modificar(TiposTarea tiposTarea)
         {
             bool paso = false;
             var contexto = new Contexto();
 
             try
             {
-                contexto.Entry(proyectos).State = EntityState.Modified;
+                contexto.Entry(tiposTarea).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -74,6 +74,14 @@ namespace _Parcial2_ap1_20180616.BLL
             }
 
             return paso;
+        }
+
+        public static bool Guardar(TiposTarea tiposTarea)
+        {
+            if (!Existe(tiposTarea.Descripcion))
+                return Insertar(tiposTarea);
+            else
+                return Modificar(tiposTarea);
         }
     }
 }

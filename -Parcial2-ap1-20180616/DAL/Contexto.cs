@@ -10,7 +10,7 @@ namespace _Parcial2_ap1_20180616.DAL
     {
         public DbSet<Proyectos> Proyectos { get; set; }
         public DbSet<ProyectosDetalle> ProyectosDetalle { get; set; }
-        public DbSet<TiposTarea> TareasTipos { get; set; }
+        public DbSet<TiposTarea> TiposTarea { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = DATA/GestionProyectos.Db");
