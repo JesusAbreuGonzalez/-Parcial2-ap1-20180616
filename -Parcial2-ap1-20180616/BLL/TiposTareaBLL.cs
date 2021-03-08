@@ -83,5 +83,28 @@ namespace _Parcial2_ap1_20180616.BLL
             else
                 return Modificar(tiposTarea);
         }
+
+        public static TiposTarea Buscar(int id)
+        {
+            var contexto = new Contexto();
+            var tiposTarea = new TiposTarea();
+
+            try
+            {
+                tiposTarea = contexto.TiposTarea.Find(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return tiposTarea;
+        }
+       
     }
 }
