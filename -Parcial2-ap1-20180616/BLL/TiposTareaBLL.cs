@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -104,6 +105,28 @@ namespace _Parcial2_ap1_20180616.BLL
             }
 
             return tiposTarea;
+        }
+
+        public static List<TiposTarea> GetList(Expression<Func<TiposTarea, bool>> criterio)
+        {
+            var lista = new List<TiposTarea>();
+            var contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.TiposTarea.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
         }
        
     }
