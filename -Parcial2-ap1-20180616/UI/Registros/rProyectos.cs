@@ -12,11 +12,24 @@ namespace _Parcial2_ap1_20180616.UI.Registros
 {
     public partial class rProyectos : Form
     {
+        public List<ProyectosDetalle> DetalleProyecto { get; set; }
+
         public rProyectos()
         {
             InitializeComponent();
+            this.DetalleProyecto = new List<ProyectosDetalle>();
         }
 
-        
+        private void LlenarGrid()
+        {
+            ProyectoDetalleDataGridView.DataSource = null;
+            ProyectoDetalleDataGridView.DataSource = this.DetalleProyecto;
+        }
+
+
+        private void GuardarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
