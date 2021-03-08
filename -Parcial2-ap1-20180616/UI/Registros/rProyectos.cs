@@ -39,6 +39,18 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             return validado;
         }
 
+        private Proyectos LlenaClase()
+        {
+            var proyecto = new Proyectos();
+            proyecto.Descripcion = DescripcionTextBox.Text;
+            proyecto.ProyectoId = (int)ProyectoIdNumericUpDown.Value;
+            proyecto.Fecha = FechaDateTimePicker.Value;
+            proyecto.TiempoTotal += Convert.ToInt32(TiempoTextBox.Text);
+            proyecto.DetalleProyecto = this.DetalleProyecto;
+
+            return proyecto;
+        }
+
         private void GuardarButton_Click(object sender, EventArgs e)
         {
 
