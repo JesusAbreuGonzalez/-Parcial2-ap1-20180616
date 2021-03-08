@@ -32,7 +32,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ProyectoErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ProyectosErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
@@ -55,15 +55,15 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.FechaLabel = new System.Windows.Forms.Label();
             this.ProyectoIdLabel = new System.Windows.Forms.Label();
             this.TiempoTotalTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ProyectoErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProyectosErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).BeginInit();
             this.DetalleGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ProyectoErrorProvider
+            // ProyectosErrorProvider
             // 
-            this.ProyectoErrorProvider.ContainerControl = this;
+            this.ProyectosErrorProvider.ContainerControl = this;
             // 
             // EliminarButton
             // 
@@ -154,6 +154,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             // 
             // TiposTareasComboBox
             // 
+            this.TiposTareasComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TiposTareasComboBox.FormattingEnabled = true;
             this.TiposTareasComboBox.Location = new System.Drawing.Point(7, 65);
             this.TiposTareasComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -334,7 +335,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.MinimumSize = new System.Drawing.Size(735, 778);
             this.Name = "rProyectos";
             this.Text = "Registro de Proyectos";
-            ((System.ComponentModel.ISupportInitialize)(this.ProyectoErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProyectosErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
             this.DetalleGroupBox.ResumeLayout(false);
@@ -345,7 +346,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
         }
 
         #endregion
-        private System.Windows.Forms.ErrorProvider ProyectoErrorProvider;
+        private System.Windows.Forms.ErrorProvider ProyectosErrorProvider;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;

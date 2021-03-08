@@ -26,6 +26,18 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             ProyectoDetalleDataGridView.DataSource = this.DetalleProyecto;
         }
 
+        private bool Validar()
+        {
+            bool validado = true;
+
+            if(DescripcionTextBox.Text == "")
+            {
+                ProyectosErrorProvider.SetError(DescripcionTextBox, "Campo obligatorio");
+                validado = false;
+            }
+
+            return validado;
+        }
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
