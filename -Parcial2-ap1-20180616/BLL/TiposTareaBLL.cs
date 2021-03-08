@@ -1,4 +1,5 @@
 ﻿using _Parcial2_ap1_20180616.DAL;
+using _Parcial2_ap1_20180616.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,5 +30,28 @@ namespace _Parcial2_ap1_20180616.BLL
 
             return encontrado;
         }
+        
+        private static bool Insertar(Proyectos proyectos)
+        {
+            bool paso = false;
+            var contexto = new Contexto();
+
+            try
+            {
+                contexto.Proyectos.Add(proyectos);
+                paso = contexto.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return paso;
+        }
+
     }
 }
