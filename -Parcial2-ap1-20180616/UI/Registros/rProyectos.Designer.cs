@@ -141,6 +141,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.TiempoTextBox.Location = new System.Drawing.Point(466, 65);
             this.TiempoTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TiempoTextBox.Name = "TiempoTextBox";
+            this.TiempoTextBox.ReadOnly = true;
             this.TiempoTextBox.Size = new System.Drawing.Size(116, 27);
             this.TiempoTextBox.TabIndex = 6;
             // 
@@ -149,6 +150,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.RequerimientoTextBox.Location = new System.Drawing.Point(162, 65);
             this.RequerimientoTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RequerimientoTextBox.Name = "RequerimientoTextBox";
+            this.RequerimientoTextBox.ReadOnly = true;
             this.RequerimientoTextBox.Size = new System.Drawing.Size(297, 27);
             this.RequerimientoTextBox.TabIndex = 5;
             // 
