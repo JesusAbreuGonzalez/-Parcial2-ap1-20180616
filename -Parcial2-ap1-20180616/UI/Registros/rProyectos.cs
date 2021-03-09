@@ -133,5 +133,21 @@ namespace _Parcial2_ap1_20180616.UI.Registros
                 TiempoTextBox.Text = TiposTareaBLL.BuscarTiempo(TiposTareasComboBox.SelectedIndex + 1);
             }
         }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+            if (ProyectoDetalleDataGridView.DataSource != null)
+                DetalleProyecto = (List<ProyectosDetalle>)ProyectoDetalleDataGridView.DataSource;
+            
+            DetalleProyecto.Add(new ProyectosDetalle()
+            {
+                ProyectoId = (int)ProyectoIdNumericUpDown.Value,
+                TipoTareaId = Convert.ToInt32(TiposTareasComboBox.SelectedIndex) + 1,
+                Requerimiento = RequerimientoTextBox.Text,
+                Tiempo = Convert.ToInt32(TiempoTextBox.Text)
+            });
+
+            LlenarGrid();
+        }
     }
 }
