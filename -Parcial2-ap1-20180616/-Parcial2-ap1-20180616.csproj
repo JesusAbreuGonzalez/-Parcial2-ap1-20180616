@@ -35,4 +35,10 @@
     <Folder Include="DATA\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DATA\GestionProyectos.Db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
