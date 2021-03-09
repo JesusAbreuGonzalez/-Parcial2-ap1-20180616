@@ -51,6 +51,14 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             return proyecto;
         }
 
+        private void LlenaCampos(Proyectos proyecto)
+        {
+            ProyectoIdNumericUpDown.Value = proyecto.ProyectoId;
+            DescripcionTextBox.Text = proyecto.Descripcion;
+            FechaDateTimePicker.Value = proyecto.Fecha;
+            TiempoTotalTextBox.Text = Convert.ToString(proyecto.TiempoTotal);
+        }
+
         private void GuardarButton_Click(object sender, EventArgs e)
         {
 
