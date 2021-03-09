@@ -82,5 +82,18 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             TiposTareasComboBox.DisplayMember = "Descripcion";
             TiposTareasComboBox.ValueMember = "TipoId";
         }
+
+        private void BuscarButton_Click(object sender, EventArgs e)
+        {
+            var proyecto = new Proyectos();
+            int id = (int)ProyectoIdNumericUpDown.Value;
+
+            Limpiar();
+            proyecto = ProyectosBLL.Buscar(id);
+            if (proyecto != null)
+                LlenaCampos(proyecto);
+            else
+                MessageBox.Show("Proyecto no encontrado en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
