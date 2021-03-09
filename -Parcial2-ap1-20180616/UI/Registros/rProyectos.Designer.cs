@@ -318,6 +318,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.TiempoTotalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TiempoTotalTextBox.Location = new System.Drawing.Point(603, 681);
             this.TiempoTotalTextBox.Name = "TiempoTotalTextBox";
+            this.TiempoTotalTextBox.ReadOnly = true;
             this.TiempoTotalTextBox.Size = new System.Drawing.Size(102, 27);
             this.TiempoTotalTextBox.TabIndex = 27;
             // 
