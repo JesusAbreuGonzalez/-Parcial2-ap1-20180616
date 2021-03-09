@@ -73,7 +73,21 @@ namespace _Parcial2_ap1_20180616.UI.Registros
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            Proyectos proyecto;
+            
+            if (!Validar())
+                return;
+            
+            proyecto = LlenaClase();
+            var paso = ProyectosBLL.Guardar(proyecto);
 
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("El proyecto ha sido guardado", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("El proyecto no ha sido guardado", "Error Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void rProyectos_Load(object sender, EventArgs e)
