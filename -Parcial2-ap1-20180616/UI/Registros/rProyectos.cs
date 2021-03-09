@@ -165,5 +165,19 @@ namespace _Parcial2_ap1_20180616.UI.Registros
         {
             Limpiar();
         }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            int id = (int)ProyectoIdNumericUpDown.Value;
+            ProyectosErrorProvider.Clear();
+
+            if(ProyectosBLL.Eliminar(id))
+            {
+                MessageBox.Show("El proyecto ha sido eliminado", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
+            else
+                MessageBox.Show("El proyecto no ha sido eliminado", "Error Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }
