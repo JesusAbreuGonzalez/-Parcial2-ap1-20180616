@@ -129,6 +129,28 @@ namespace _Parcial2_ap1_20180616.BLL
             return tiposTarea.Requerimiento;
         }
 
+        public static string BuscarTiempo(int id)
+        {
+            var contexto = new Contexto();
+            var tiposTarea = new TiposTarea();
+
+            try
+            {
+                tiposTarea = contexto.TiposTarea.Find(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return Convert.ToString(tiposTarea.Tiempo);
+        }
+
         public static List<TiposTarea> GetList(Expression<Func<TiposTarea, bool>> criterio)
         {
             var lista = new List<TiposTarea>();
