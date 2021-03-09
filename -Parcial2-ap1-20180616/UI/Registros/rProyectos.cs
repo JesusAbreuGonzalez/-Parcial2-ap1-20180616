@@ -78,7 +78,9 @@ namespace _Parcial2_ap1_20180616.UI.Registros
 
         private void rProyectos_Load(object sender, EventArgs e)
         {
-            TiposTareasComboBox.DataSource = TiposTareaBLL.
+            TiposTareasComboBox.DataSource = TiposTareaBLL.GetTareas();
+            TiposTareasComboBox.DisplayMember = "Descripcion";
+            TiposTareasComboBox.ValueMember = "TipoId";
         }
     }
 }
