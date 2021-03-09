@@ -59,6 +59,17 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             TiempoTotalTextBox.Text = Convert.ToString(proyecto.TiempoTotal);
         }
 
+        private void Limpiar()
+        {
+            ProyectoIdNumericUpDown.Value = 0;
+            DescripcionTextBox.Clear();
+            ProyectosErrorProvider.Clear();
+            FechaDateTimePicker.Value = DateTime.Now;
+            TiempoTotalTextBox.Clear();
+            DetalleProyecto = new List<ProyectosDetalle>();
+            LlenarGrid();
+        }
+
         private void GuardarButton_Click(object sender, EventArgs e)
         {
 
