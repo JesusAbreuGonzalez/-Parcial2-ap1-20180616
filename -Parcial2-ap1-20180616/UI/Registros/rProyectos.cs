@@ -160,5 +160,10 @@ namespace _Parcial2_ap1_20180616.UI.Registros
                 LlenarGrid();
             }
         }
+
+        private void NuevoButton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }
