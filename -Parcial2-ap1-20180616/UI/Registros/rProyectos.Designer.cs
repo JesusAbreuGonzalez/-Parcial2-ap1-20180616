@@ -121,6 +121,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.RemoverButton.Text = "Remover";
             this.RemoverButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RemoverButton.UseVisualStyleBackColor = true;
+            this.RemoverButton.Click += new System.EventHandler(this.RemoverButton_Click);
             // 
             // ProyectoDetalleDataGridView
             // 
