@@ -128,6 +128,28 @@ namespace _Parcial2_ap1_20180616.BLL
 
             return lista;
         }
+
+        public static List<TiposTarea> GetTareas()
+        {
+            var lista = new List<TiposTarea>();
+            var contexto = new Contexto();
+
+            try
+            {
+                lista = contexto.TiposTarea.ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return lista;
+        }
        
     }
 }

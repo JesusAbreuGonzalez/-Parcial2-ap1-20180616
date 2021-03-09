@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using _Parcial2_ap1_20180616.Entidades;
 using _Parcial2_ap1_20180616.DAL;
+using _Parcial2_ap1_20180616.BLL;
 
 namespace _Parcial2_ap1_20180616.UI.Registros
 {
@@ -73,6 +74,11 @@ namespace _Parcial2_ap1_20180616.UI.Registros
         private void GuardarButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rProyectos_Load(object sender, EventArgs e)
+        {
+            TiposTareasComboBox.DataSource = TiposTareaBLL.
         }
     }
 }

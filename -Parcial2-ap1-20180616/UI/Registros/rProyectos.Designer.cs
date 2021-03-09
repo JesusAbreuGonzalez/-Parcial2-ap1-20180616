@@ -337,6 +337,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.MinimumSize = new System.Drawing.Size(735, 778);
             this.Name = "rProyectos";
             this.Text = "Registro de Proyectos";
+            this.Load += new System.EventHandler(this.rProyectos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProyectosErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoDetalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProyectoIdNumericUpDown)).EndInit();
