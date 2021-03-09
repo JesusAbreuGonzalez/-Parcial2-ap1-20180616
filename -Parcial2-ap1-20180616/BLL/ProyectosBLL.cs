@@ -63,7 +63,7 @@ namespace _Parcial2_ap1_20180616.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete from ProyectosDetalle where proyectoId = {proyectos.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"DELETE FROM ProyectosDetalle WHERE ProyectoId = {proyectos.ProyectoId}");
                 foreach (var anterior in proyectos.DetalleProyecto)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;
@@ -85,10 +85,11 @@ namespace _Parcial2_ap1_20180616.BLL
 
         public static bool Guardar(Proyectos proyectos)
         {
-            if (!Existe(proyectos.Descripcion))
+            if (Existe(proyectos.Descripcion))
                 return Insertar(proyectos);
             else
                 return Modificar(proyectos);
+
         }
 
         public static Proyectos Buscar(int id)

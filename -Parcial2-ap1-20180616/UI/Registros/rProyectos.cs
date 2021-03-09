@@ -36,6 +36,16 @@ namespace _Parcial2_ap1_20180616.UI.Registros
                 ProyectosErrorProvider.SetError(DescripcionTextBox, "Campo obligatorio");
                 validado = false;
             }
+            if(DetalleProyecto.Count == 0)
+            {
+                ProyectosErrorProvider.SetError(ProyectoDetalleDataGridView, "Agregue un tipo de tarea");
+                validado = false;
+            }
+            if(ProyectosBLL.Existe(DescripcionTextBox.Text))
+            {
+                ProyectosErrorProvider.SetError(DescripcionTextBox, "Esta descripcion ya existe");
+                validado = false;
+            }
 
             return validado;
         }
@@ -79,7 +89,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             
             if (!Validar())
                 return;
-            
+
             proyecto = LlenaClase();
             var paso = ProyectosBLL.Guardar(proyecto);
 
@@ -90,6 +100,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             }
             else
                 MessageBox.Show("El proyecto no ha sido guardado", "Error Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
         }
 
         private void rProyectos_Load(object sender, EventArgs e)
