@@ -163,6 +163,7 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             this.TiposTareasComboBox.Name = "TiposTareasComboBox";
             this.TiposTareasComboBox.Size = new System.Drawing.Size(148, 28);
             this.TiposTareasComboBox.TabIndex = 4;
+            this.TiposTareasComboBox.SelectedIndexChanged += new System.EventHandler(this.TiposTareasComboBox_SelectedIndexChanged);
             // 
             // AgregarButton
             // 

@@ -109,5 +109,29 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             else
                 MessageBox.Show("Proyecto no encontrado en la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void TiposTareasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(TiposTareasComboBox.SelectedIndex == 0)
+            {
+                RequerimientoTextBox.Text = TiposTareaBLL.BuscarRequerimiento(TiposTareasComboBox.SelectedIndex + 1);
+                TiempoTextBox.Text = TiposTareaBLL.BuscarTiempo(TiposTareasComboBox.SelectedIndex + 1);
+            }
+            else if (TiposTareasComboBox.SelectedIndex == 1)
+            {
+                RequerimientoTextBox.Text = TiposTareaBLL.BuscarRequerimiento(TiposTareasComboBox.SelectedIndex + 1);
+                TiempoTextBox.Text = TiposTareaBLL.BuscarTiempo(TiposTareasComboBox.SelectedIndex + 1);
+            }
+            else if (TiposTareasComboBox.SelectedIndex == 2)
+            {
+                RequerimientoTextBox.Text = TiposTareaBLL.BuscarRequerimiento(TiposTareasComboBox.SelectedIndex + 1);
+                TiempoTextBox.Text = TiposTareaBLL.BuscarTiempo(TiposTareasComboBox.SelectedIndex + 1);
+            }
+            else if (TiposTareasComboBox.SelectedIndex == 3)
+            {
+                RequerimientoTextBox.Text = TiposTareaBLL.BuscarRequerimiento(TiposTareasComboBox.SelectedIndex + 1);
+                TiempoTextBox.Text = TiposTareaBLL.BuscarTiempo(TiposTareasComboBox.SelectedIndex + 1);
+            }
+        }
     }
 }
