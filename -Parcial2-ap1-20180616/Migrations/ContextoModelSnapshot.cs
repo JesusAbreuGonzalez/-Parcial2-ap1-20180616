@@ -78,7 +78,7 @@ namespace _Parcial2_ap1_20180616.Migrations
 
                     b.HasKey("TipoId");
 
-                    b.ToTable("TareasTipos");
+                    b.ToTable("TiposTarea");
 
                     b.HasData(
                         new

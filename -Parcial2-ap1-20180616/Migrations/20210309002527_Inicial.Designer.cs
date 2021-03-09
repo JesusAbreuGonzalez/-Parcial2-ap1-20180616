@@ -9,7 +9,7 @@ using _Parcial2_ap1_20180616.DAL;
 namespace _Parcial2_ap1_20180616.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210308033944_Inicial")]
+    [Migration("20210309002527_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -80,7 +80,7 @@ namespace _Parcial2_ap1_20180616.Migrations
 
                     b.HasKey("TipoId");
 
-                    b.ToTable("TareasTipos");
+                    b.ToTable("TiposTarea");
 
                     b.HasData(
                         new

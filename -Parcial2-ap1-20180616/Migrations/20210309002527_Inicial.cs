@@ -23,7 +23,7 @@ namespace _Parcial2_ap1_20180616.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TareasTipos",
+                name: "TiposTarea",
                 columns: table => new
                 {
                     TipoId = table.Column<int>(type: "INTEGER", nullable: false)
@@ -34,7 +34,7 @@ namespace _Parcial2_ap1_20180616.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TareasTipos", x => x.TipoId);
+                    table.PrimaryKey("PK_TiposTarea", x => x.TipoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -60,22 +60,22 @@ namespace _Parcial2_ap1_20180616.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "TareasTipos",
+                table: "TiposTarea",
                 columns: new[] { "TipoId", "Descripcion", "Requerimiento", "Tiempo" },
                 values: new object[] { 1, "Análisis", "Analizar la opción de clientes", 120 });
 
             migrationBuilder.InsertData(
-                table: "TareasTipos",
+                table: "TiposTarea",
                 columns: new[] { "TipoId", "Descripcion", "Requerimiento", "Tiempo" },
                 values: new object[] { 2, "Diseño", "Hacer un diseño excelente", 60 });
 
             migrationBuilder.InsertData(
-                table: "TareasTipos",
+                table: "TiposTarea",
                 columns: new[] { "TipoId", "Descripcion", "Requerimiento", "Tiempo" },
                 values: new object[] { 3, "Programación", "Programar todo el registro", 240 });
 
             migrationBuilder.InsertData(
-                table: "TareasTipos",
+                table: "TiposTarea",
                 columns: new[] { "TipoId", "Descripcion", "Requerimiento", "Tiempo" },
                 values: new object[] { 4, "Prueba", "Probar con mucho cuidado", 30 });
 
@@ -91,7 +91,7 @@ namespace _Parcial2_ap1_20180616.Migrations
                 name: "ProyectosDetalle");
 
             migrationBuilder.DropTable(
-                name: "TareasTipos");
+                name: "TiposTarea");
 
             migrationBuilder.DropTable(
                 name: "Proyectos");
