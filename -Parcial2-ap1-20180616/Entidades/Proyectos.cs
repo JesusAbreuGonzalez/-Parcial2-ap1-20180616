@@ -24,14 +24,5 @@ namespace _Parcial2_ap1_20180616.Entidades
             TiempoTotal = 0;
             DetalleProyecto = new List<ProyectosDetalle>();
         }
-
-        public Proyectos(int proyectoId, DateTime fecha, string descripcion, int tiempoTotal)
-        {
-            ProyectoId = proyectoId;
-            Fecha = fecha;
-            Descripcion = descripcion;
-            TiempoTotal = tiempoTotal;
-            DetalleProyecto = new List<ProyectosDetalle>();
-        }
     }
 }

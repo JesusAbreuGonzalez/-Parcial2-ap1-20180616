@@ -22,22 +22,5 @@ namespace _Parcial2_ap1_20180616.Entidades
             Requerimiento = string.Empty;
             Tiempo = 0;
         }
-
-        public ProyectosDetalle(int proyectoId, int tipoTareaId, string requerimiento, int tiempo)
-        {
-            ProyectoId = proyectoId;
-            TipoTareaId = tipoTareaId;
-            Requerimiento = requerimiento;
-            Tiempo = tiempo;
-        }
-        public ProyectosDetalle(int detalleId, int proyectoId, int tipoTareaId, string requerimiento, int tiempo)
-        {
-            DetalleId = detalleId;
-            ProyectoId = proyectoId;
-            TipoTareaId = tipoTareaId;
-            Requerimiento = requerimiento;
-            Tiempo = tiempo;
-        }
-
     }
 }

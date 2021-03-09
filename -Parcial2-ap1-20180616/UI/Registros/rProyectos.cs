@@ -100,7 +100,6 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             }
             else
                 MessageBox.Show("El proyecto no ha sido guardado", "Error Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
         }
 
         private void rProyectos_Load(object sender, EventArgs e)

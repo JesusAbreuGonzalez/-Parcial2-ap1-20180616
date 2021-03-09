@@ -19,14 +19,5 @@ namespace _Parcial2_ap1_20180616.Entidades
             Requerimiento = "";
             Tiempo = 0;
         }
-
-        public TiposTarea(int id, string descripcion, string requerimiento, int tiempo)
-        {
-            TipoId = id;
-            Descripcion = descripcion;
-            Requerimiento = requerimiento;
-            Tiempo = tiempo;
-        }
-
     }
 }
