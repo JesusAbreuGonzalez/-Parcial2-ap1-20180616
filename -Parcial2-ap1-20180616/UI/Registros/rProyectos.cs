@@ -58,6 +58,8 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             DescripcionTextBox.Text = proyecto.Descripcion;
             FechaDateTimePicker.Value = proyecto.Fecha;
             TiempoTotalTextBox.Text = Convert.ToString(proyecto.TiempoTotal);
+            DetalleProyecto = proyecto.DetalleProyecto;
+            LlenarGrid();
         }
 
         private void Limpiar()
