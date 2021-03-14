@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using _Parcial2_ap1_20180616.Entidades;
 using _Parcial2_ap1_20180616.DAL;
 using _Parcial2_ap1_20180616.BLL;
+using System.Linq;
 
 namespace _Parcial2_ap1_20180616.UI.Registros
 {
@@ -39,11 +40,6 @@ namespace _Parcial2_ap1_20180616.UI.Registros
             if(DetalleProyecto.Count == 0)
             {
                 ProyectosErrorProvider.SetError(ProyectoDetalleDataGridView, "Agregue un tipo de tarea");
-                validado = false;
-            }
-            if(ProyectosBLL.Existe(DescripcionTextBox.Text))
-            {
-                ProyectosErrorProvider.SetError(DescripcionTextBox, "Esta descripcion ya existe");
                 validado = false;
             }
 

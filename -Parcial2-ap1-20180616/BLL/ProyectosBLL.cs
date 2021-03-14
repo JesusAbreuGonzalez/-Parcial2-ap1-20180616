@@ -85,7 +85,7 @@ namespace _Parcial2_ap1_20180616.BLL
 
         public static bool Guardar(Proyectos proyectos)
         {
-            if (Existe(proyectos.Descripcion))
+            if (!Existe(proyectos.Descripcion))
                 return Insertar(proyectos);
             else
                 return Modificar(proyectos);
